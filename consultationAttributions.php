@@ -74,9 +74,10 @@ if ($nbEtab!=0)
       {
          $idGroupe=$lgGroupe['id'];
          $nomGroupe=$lgGroupe['nom'];
+         $nomdespays=$lgGroupe['nomPays'];
          echo "
          <tr class='ligneTabQuad'>
-            <td width='65%' align='left'>$nomGroupe</td>";
+            <td width='65%' align='left'>$nomGroupe ($nomdespays)</td>";
          // On recherche si des chambres ont déjà été attribuées à ce groupe
          // dans l'établissement
          $nbOccupGroupe=obtenirNbOccupGroupe($dbh, $idEtab, $idGroupe);
