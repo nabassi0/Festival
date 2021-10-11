@@ -1,5 +1,7 @@
 <?php
 
+echo"<title> Acceuil > Attribution > Modification attribution</title>";
+
 include("_debut.inc.php");
 include("_gestionBase.inc.php"); 
 include("_controlesEtGestionErreurs.inc.php");
@@ -36,7 +38,7 @@ if ($action=='validerModifAttrib')
 {
    $idEtab=$_REQUEST['idEtab'];
    $idGroupe=$_REQUEST['idGroupe'];
-   $nbChambres=$_REQUEST['Yann'];
+   $nbChambres=$_REQUEST['Yann']; // création Yann. 
    modifierAttribChamb($dbh, $idEtab, $idGroupe, $nbChambres);
 }
 

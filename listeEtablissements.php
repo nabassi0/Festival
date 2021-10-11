@@ -1,4 +1,6 @@
 <?php
+echo"
+<title> Acceuil > Gestion Etablissement </title>";
 
 include("_debut.inc.php");
 include("_gestionBase.inc.php"); 
@@ -58,8 +60,13 @@ class='tabNonQuadrille'>
          {
             $idEtab=$id;
             $req2=obtenirNbOccup($dbh, $idEtab);
-            echo "
-            <td width='16%'> ($req2 attributions) </td>";          
+            $nbmax=obtenirEtabComplet($dbh, $id);
+            if ($req2==$nbmax)
+            {
+               echo "<td width='16%'> Complet </td>";
+            }
+            else{echo "
+            <td width='16%'> ($req2 attributions) </td>";  }        
 			}
 			echo "
       </tr>";

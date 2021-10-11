@@ -1,5 +1,7 @@
 <?php
 
+echo"<title> Acceuil > Gestion des équipes> Supprimer des équipes </title>";
+
 include("_debut.inc.php");
 include("_gestionBase.inc.php"); 
 include("_controlesEtGestionErreurs.inc.php");

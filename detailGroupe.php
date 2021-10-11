@@ -1,5 +1,8 @@
 <?php
 
+echo"
+<title> Acceuil > Gestion des équipes> Détails équipes> Modifier les détails des équipes </title>";
+
 include("_debut.inc.php");
 include("_gestionBase.inc.php"); 
 include("_controlesEtGestionErreurs.inc.php");

@@ -1,5 +1,7 @@
 <?php
 
+echo"<title> Acceuil > Attribution </title>";
+
 include("_debut.inc.php");
 include("_gestionBase.inc.php"); 
 include("_controlesEtGestionErreurs.inc.php");
@@ -74,10 +76,10 @@ if ($nbEtab!=0)
       {
          $idGroupe=$lgGroupe['id'];
          $nomGroupe=$lgGroupe['nom'];
-         $nomdespays=$lgGroupe['nomPays'];
+         $nomdespays=$lgGroupe['nomPays']; // ON A RAJOUTER UNE VARARIABLE NOMDESPAYS
          echo "
          <tr class='ligneTabQuad'>
-            <td width='65%' align='left'>$nomGroupe ($nomdespays)</td>";
+            <td width='65%' align='left'>$nomGroupe ($nomdespays)</td>"; // AFFICHAGE DU CONTENU DE LA VARIABLE
          // On recherche si des chambres ont déjà été attribuées à ce groupe
          // dans l'établissement
          $nbOccupGroupe=obtenirNbOccupGroupe($dbh, $idEtab, $idGroupe);

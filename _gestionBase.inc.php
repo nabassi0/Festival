@@ -213,7 +213,19 @@ function obtenirReqGroupesEtab($id)
         Attribution.idGroupe=Groupe.id and idEtab='$id'"; // on rajoute nomPays dans la fonction.
    return $req;
 }
-            
+
+function obtenirEtabComplet($connexion, $id)
+{
+   $req="select nombreChambresOffertes from Etablissement where id='$id'";
+   $rsOccup=$connexion->query($req); // modification de la ligne de code en pdo
+   $lgOccup=$rsOccup->fetchAll(); // modification de la ligne de code en pdo
+   foreach ($lgOccup as $row)
+   {
+      $totalChambresOccup=$row['nombreChambresOffertes'];
+   }
+   return $totalChambresOccup; // modification en foreach
+}
+
 // Retourne le nombre de chambres occupées par le groupe transmis pour l'id étab
 // et l'id groupe transmis
 function obtenirNbOccupGroupe($dbh, $idEtab, $idGroupe)
